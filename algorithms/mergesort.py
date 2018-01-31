@@ -3,8 +3,6 @@
 Recursive top-down implementation using lists. From https://en.wikipedia.org/wiki/Merge_sort
 '''
 
-import random
-
 def merge(left, right):
     '''Merges the left and right sublists
     '''
@@ -55,6 +53,9 @@ def merge_sort(l):
     # Merge the now-sorted sublists
     return merge(left, right)
 
-unsorted = [ random.randint(-100, 100) for i in range(30) ]
+import random
+random.seed(310118)
+
+unsorted = [ random.randint(-100, 100) for i in range(20) ]
 print 'Unsorted list:\t', unsorted
 print 'Sorted list:\t', merge_sort(unsorted)
